@@ -1,63 +1,114 @@
-*{
+* {
     padding: 0;
-    margin: 0;
     box-sizing: content-box;
     text-decoration: none;
     list-style: none;
     font-family: sans-serif;
 }
 
-body{
-    background-color: #100f0f;
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #100F0F;
 }
 
-/* ---- Encabezado ---- */
+/*---- Encabezado ----*/
 
-.header{
-    /* background-color: #080707; */
+.header {
+    background-color: #080707;
     height: 5rem;
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1;
-    background: linear-gradient( #080707 , #100f0f);
+    background: linear-gradient(#080707, #100F0F);
 }
 
-.nav-link, 
-.subtitulo{
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.nav-input:checked+.nav-menu {
+    background: #080707;
+}
+
+.nav-label,
+.nav-input {
+    display: none;
+}
+
+.subtitulo {
     color: white;
+    font-size: 1rem;
+    line-height: 3rem;
+}
+
+.nav h2 {
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.nav-menu {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.nav-menu-item {
+    padding: 0 0.9rem;
+    text-transform: uppercase;
+    /* width: max-content; */
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav-menu-item::after {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .3s;
+}
+
+.nav-menu-item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.subtitulo:hover {
+    color: rgb(116, 116, 116);
     transition: 300ms;
 }
 
-.nav-link:hover, 
-.subtitulo:hover{
-     color:rgb(160, 160, 160)
-}
+@media (max-width: 700px) {
+    .nav-label {
+        display: block;
+        cursor: pointer;
+    }
 
-/* ---- Portada ---*/
+    .nav-menu {
+        position: fixed;
+        top: 4rem;
+        bottom: 0;
+        background: #080707;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
 
-.portada{
-    position:relative;
-    margin-top: 0;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.txt{
-    text-align: center;
-    position: absolute;
-}
-.txt h1{
-    font-size: 1.6rem;
-   color: white;
-   text-align: center;
-   text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
-}
-
-.txt h3 {
-   font-size: 1rem;
-   text-align: center;
-   color: white;
-   text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+    .nav-input:checked+.nav-menu {
+        /* background: #080707; */
+        clip-path: circle(100% at center);
+    }
 }
