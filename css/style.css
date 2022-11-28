@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #100f0f;
+}
+
+/* ---- Encabezado ---- */
+
+.header{
+    /* background-color: #080707; */
+    height: 5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient( #080707 , #100f0f);
+}
+
+.nav-link, 
+.subtitulo{
+    color: white;
+    transition: 300ms;
+}
+
+.nav-link:hover, 
+.subtitulo:hover{
+     color:rgb(160, 160, 160)
+}
+
+/* ---- Portada ---*/
+
+.portada{
+    position:relative;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt{
+    text-align: center;
+    position: absolute;
+}
+.txt h1{
+    font-size: 1.6rem;
+   color: white;
+   text-align: center;
+   text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
+
+.txt h3 {
+   font-size: 1rem;
+   text-align: center;
+   color: white;
+   text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
