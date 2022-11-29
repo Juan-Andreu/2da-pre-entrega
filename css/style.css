@@ -19,7 +19,7 @@ body {
     background-color: #080707;
     height: 5rem;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: 1;
@@ -29,7 +29,7 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
-    max-width: 992px;
+    /* max-width: 992px; */
     margin: 0 auto;
     align-items: center;
 }
@@ -146,6 +146,7 @@ body {
 /*---- Seccion de informacion ----*/
 
 .seccion-dos {
+    width: 100vw;
     padding-top: 4rem;
     text-align: justify;
     display: flex;
@@ -168,8 +169,89 @@ body {
     border-radius: 0.625rem;
 }
 
-@media (max-width: 600px){
-    .container-foto{
-        width: 100%;
-    }
+/* ---- Pie de pagina ---- */
+
+.footer {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.nombre-footer {
+    text-align: center;
+    color: white;
+    font-size: 1.125rem;
+    text-shadow: 1px 1px 5px black;
+}
+
+.copyright,
+.mas-info {
+    color: white;
+    text-align: center;
+    margin: 0.5rem 2rem;
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.footer div ul {
+    display: none;
+    margin-bottom: 0;
+}
+
+.footer-items {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 1.3rem;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/*---- Discography ---- */
+
+.container-discography {
+    display: flex;
+    margin-top: 10rem;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.titulo-discography {
+    position: absolute;
+    top: -8rem;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 10px black;
+}
+
+.container-discography div {
+    padding: 2rem;
+}
+
+.container-discography iframe {
+    box-shadow: 5px 5px 10px black;
+}
+
+/*---- Musicas populares ----*/
+
+.container-music {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.container-music div {
+    padding: 1rem;
+}
+
+.container-music div h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
 }
