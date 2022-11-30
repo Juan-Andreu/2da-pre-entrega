@@ -259,3 +259,52 @@ body {
     color: white;
     font-size: 2rem;
 }
+
+/*---- Tour ----*/
+
+.section-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 8rem;
+}
+
+.table {
+    /* background-color: #080707; */
+    border-radius: 0.500rem;
+    margin-top: 3rem;
+    width: 50vw;
+    height: 55vh;
+    padding: 2.5rem;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table tr {
+    border-bottom: 2px solid white;
+}
+
+/*---- Gallery Photos ----*/
+
+.container-gallery {
+    margin-top: 15rem;
+}
+
+.container-gallery-img img {
+    border-radius: 0.3rem;
+    margin: 10px;
+}
+
+.container-gallery-img {
+    margin: 0 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px 0;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+}
