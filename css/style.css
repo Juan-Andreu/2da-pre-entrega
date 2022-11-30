@@ -271,6 +271,10 @@ body {
     margin-top: 8rem;
 }
 
+.contenedor-table {
+     width: auto;
+}
+
 .table {
     /* background-color: #080707; */
     border-radius: 0.500rem;
