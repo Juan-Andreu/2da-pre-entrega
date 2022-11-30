@@ -86,7 +86,7 @@ body {
     transition: 300ms;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .nav-label {
         display: block;
         cursor: pointer;
@@ -168,7 +168,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 400px; 
+    width: 37.5rem; 
     height: 25rem; 
     border-radius: 0.625rem;
 }
@@ -176,7 +176,7 @@ body {
 /* ---- Pie de pagina ---- */
 
 .footer {
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
