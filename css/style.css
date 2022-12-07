@@ -14,19 +14,22 @@
   margin: 0 10px;
   align-items: center;
 }
-.header .nav .nav-input:checked + .nav-menu {
-  background: #080707;
-}
-.header .nav .nav-input:checked + .nav-menu .nav-label,
-.header .nav .nav-input:checked + .nav-menu .nav-input {
-  display: none;
-}
-.header .nav .nav-input:checked + .nav-menu .nav-label .subtitulo,
-.header .nav .nav-input:checked + .nav-menu .nav-input .subtitulo {
+.header .nav .subtitulo {
   color: white;
   font-size: 1rem;
   line-height: 2.8rem;
   list-style: none;
+}
+.header .nav .subtitulo h2 {
+  font-weight: bold;
+  grid-auto-flow: column;
+}
+.header .nav .subtitulo h2 .nav-input:checked + .nav-menu {
+  background: #080707;
+}
+.header .nav .subtitulo h2 .nav-input:checked + .nav-menu .nav-label,
+.header .nav .subtitulo h2 .nav-input:checked + .nav-menu .nav-input {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
