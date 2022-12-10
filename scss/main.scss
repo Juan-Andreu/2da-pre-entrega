@@ -29,7 +29,7 @@ body {
         display: flex;
         justify-content: space-between;
         /* max-width: 992px; */
-        margin: 0 10px;
+        margin: 0 15px;
         align-items: center;
 
         .nav-label,
@@ -45,7 +45,8 @@ body {
 
         .subtitulo:hover {
             color: rgb(116, 116, 116);
-            transition: 300ms;
+            transition: 500ms;
+            font-size: 1.05rem;
         }
 
         h2 {
@@ -169,7 +170,8 @@ body {
 
 // ---- Pie de pagina ----
 
-.footer, .footer__gallery {
+.footer,
+.footer__gallery {
     margin-top: 5rem;
     display: flex;
     flex-flow: column wrap;
@@ -281,6 +283,35 @@ body {
     }
 }
 
+// ---- Shop ---- 
+
+.tarjeta {
+    width: 350px;
+    height: 300px;
+
+    &__titulo {
+        font-size: 24px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__boton {
+        padding: 8px 10px;
+        background: #fff;
+        color: black;
+        border-radius: 5px;
+        transition: 500ms;
+
+        &:hover {
+            background: #a2a2a2;
+            color: #080707;
+            padding: 10px 12px;
+        }
+    }
+}
+
 // ---- Gallery Photos ----
 
 .container-gallery {
@@ -304,6 +335,6 @@ body {
     }
 }
 
-.footer__gallery{
+.footer__gallery {
     margin-top: 10rem;
 }
