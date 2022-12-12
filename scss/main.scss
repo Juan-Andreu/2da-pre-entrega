@@ -1,3 +1,13 @@
+@import"./utils/variables";
+@import"./utils/mixin";
+
+@import "./base/base";
+
+@import "./components/media";
+// @import "./components/";
+
+// @import "./pages/index";
+
 * {
     padding: 0;
     box-sizing: content-box;
@@ -28,7 +38,6 @@ body {
     .nav {
         display: flex;
         justify-content: space-between;
-        /* max-width: 992px; */
         margin: 0 15px;
         align-items: center;
 
@@ -38,7 +47,7 @@ body {
         }
 
         .subtitulo {
-            color: white;
+            color: $color-letra;
             font-size: 1rem;
             line-height: 2.8rem;
         }
@@ -61,7 +70,6 @@ body {
             .nav-menu-item {
                 padding: 0 0.9rem;
                 text-transform: uppercase;
-                /* width: max-content; */
                 --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 
                 .nav-menu-item::after {
@@ -80,33 +88,6 @@ body {
                 }
             }
         }
-    }
-}
-
-@media (max-width: 800px) {
-    .nav-label {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 4rem;
-        bottom: 0;
-        background: #080707;
-        width: 100vw;
-        left: 0;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
-    }
-
-    .nav-input:checked+.nav-menu {
-        /* background: #080707; */
-        clip-path: circle(100% at center);
     }
 }
 

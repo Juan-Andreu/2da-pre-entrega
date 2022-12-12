@@ -13,6 +13,44 @@ body {
   background-color: #100F0F;
 }
 
+@media (max-width: 800px) {
+  .nav-label {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    background: #080707;
+    width: 100vw;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+  }
+  .nav-input:checked + .nav-menu {
+    clip-path: circle(100% at center);
+  }
+}
+* {
+  padding: 0;
+  box-sizing: content-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  background-color: #100F0F;
+}
+
 .header {
   background-color: #080707;
   height: 5rem;
@@ -26,7 +64,6 @@ body {
 .header .nav {
   display: flex;
   justify-content: space-between;
-  /* max-width: 992px; */
   margin: 0 15px;
   align-items: center;
 }
@@ -55,7 +92,6 @@ body {
 .header .nav .nav-menu .nav-menu-item {
   padding: 0 0.9rem;
   text-transform: uppercase;
-  /* width: max-content; */
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 .header .nav .nav-menu .nav-menu-item .nav-menu-item::after {
@@ -72,30 +108,6 @@ body {
   --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-@media (max-width: 800px) {
-  .nav-label {
-    display: block;
-    cursor: pointer;
-  }
-  .nav-menu {
-    position: fixed;
-    top: 4rem;
-    bottom: 0;
-    background: #080707;
-    width: 100vw;
-    left: 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    clip-path: circle(0 at center);
-    transition: clip-path 1s ease-in-out;
-  }
-  .nav-input:checked + .nav-menu {
-    /* background: #080707; */
-    clip-path: circle(100% at center);
-  }
-}
 .container-foto {
   background-image: url(../img/fondo.png);
   background-position: center;
