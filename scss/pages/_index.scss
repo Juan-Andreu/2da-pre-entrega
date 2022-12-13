@@ -1,0 +1,192 @@
+ // ---- Encabezado ----
+
+.header {
+    background-color: #080707;
+    height: 5rem;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(#080707, #100F0F);
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15px;
+        align-items: center;
+
+        //  .nav-label,
+        .nav-input {
+            display: none;
+        }
+
+        .subtitulo {
+            color: $color-letra;
+            font-size: 1rem;
+            line-height: 2.8rem;
+        }
+
+        .subtitulo:hover {
+            color: rgb(116, 116, 116);
+            transition: 500ms;
+            font-size: 1.05rem;
+        }
+
+        h2 {
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        &__menu {
+            display: grid;
+            grid-auto-flow: column;
+
+            .nav-menu-item {
+                padding: 0 0.9rem;
+                text-transform: uppercase;
+                --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+                .nav-menu-item::after {
+                    content: "";
+                    display: block;
+                    background: #fff;
+                    width: 90%;
+                    margin-top: 3px;
+                    height: 3px;
+                    clip-path: var(--clippy);
+                    transition: clip-path .3s;
+
+                    .nav-menu-item:hover {
+                        --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ---- Portada principal ----
+
+.container-foto {
+    background-image: url(../img/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 98.8vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        font-size: 2.6rem;
+        color: $color-letra;
+        text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+    }
+
+    h3 {
+        font-size: 1rem;
+        color: $color-letra;
+        text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+    }
+}
+
+// ---- Seccion de informacion ----
+
+.seccion-dos {
+    padding-top: 4rem;
+    text-align: justify;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 3rem;
+    justify-content: space-around;
+    align-items: center;
+
+    p {
+        color: $color-letra;
+        font-size: 1rem;
+        width: 45vw;
+        align-items: center;
+    }
+
+    .bgfa-foto {
+        background-image: url(../img/bgfa.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 37.5rem;
+        height: 25rem;
+        border-radius: 0.625rem;
+    }
+}
+
+// ---- Pie de pagina ----
+
+.footer,
+.footer__gallery {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+
+    .nombre-footer {
+        color: $color-letra;
+        font-size: 1.125rem;
+        text-shadow: 1px 1px 5px black;
+        margin: 0;
+    }
+
+    .footer-items .subtitulo {
+        display: flex;
+        color: $color-letra;
+        flex-flow: row wrap;
+        margin: 1rem;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .copyright,
+    .mas-info {
+        color: $color-letra;
+        text-align: center;
+        margin: 0.5rem 2rem;
+        display: block;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-foto {
+        background-image: url(../img/fondo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        h1 {
+            text-align: center;
+            font-size: 1.6rem;
+            color: $color-letra;
+            text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+        }
+    
+        h3 {
+            font-size: 0.5rem;
+            color: $color-letra;
+            text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+        }
+    }
+
+}

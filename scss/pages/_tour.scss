@@ -1,0 +1,25 @@
+// ---- Tour ----
+
+.section-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-letra;
+    margin-top: 8rem;
+
+    .table {
+        /* background-color: #080707; */
+        border-radius: 0.500rem;
+        margin-top: 3rem;
+        width: 50vw;
+        height: 55vh;
+        padding: 2.5rem;
+        text-align: center;
+        border-collapse: collapse;
+
+        tr {
+            border-bottom: 2px solid white;
+        }
+    }
+}

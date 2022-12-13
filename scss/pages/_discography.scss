@@ -1,0 +1,43 @@
+// ---- Archivo Discography ----
+
+.container-discography {
+    display: flex;
+    margin-top: 10rem;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    position: relative;
+
+    .titulo-discography {
+        position: absolute;
+        top: -8rem;
+        text-align: center;
+        color: $color-letra;
+        text-shadow: 3px 3px 10px black;
+    }
+
+    div {
+        padding: 2rem;
+    }
+
+    iframe {
+        box-shadow: 5px 5px 10px black;
+    }
+}
+
+/*---- Musicas populares ----*/
+
+.container-music {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    margin: 55px;
+
+    h3 {
+        color: $color-letra;
+        text-align: center;
+        font-size: 2rem;
+    }
+}

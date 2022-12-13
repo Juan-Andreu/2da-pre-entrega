@@ -83,8 +83,8 @@ body {
     width: 100vw;
     left: 0;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     clip-path: circle(0 at center);
     transition: clip-path 1s ease-in-out;
@@ -93,19 +93,17 @@ body {
     clip-path: circle(100% at center);
   }
 }
-* {
-  padding: 0;
-  box-sizing: content-box;
-  text-decoration: none;
-  list-style: none;
-  font-family: sans-serif;
+.tarjeta__boton {
+  padding: 8px 10px;
+  background: #fff;
+  color: black;
+  border-radius: 5px;
+  transition: 500ms;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  /* overflow-x: hidden; */
-  background-color: #100F0F;
+.tarjeta__boton:hover {
+  background: #a2a2a2;
+  color: #080707;
+  padding: 10px 12px;
 }
 
 .header {
@@ -141,16 +139,16 @@ body {
   font-weight: bold;
   padding: 0 20px;
 }
-.header .nav .nav-menu {
+.header .nav__menu {
   display: grid;
   grid-auto-flow: column;
 }
-.header .nav .nav-menu .nav-menu-item {
+.header .nav__menu .nav-menu-item {
   padding: 0 0.9rem;
   text-transform: uppercase;
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
-.header .nav .nav-menu .nav-menu-item .nav-menu-item::after {
+.header .nav__menu .nav-menu-item .nav-menu-item::after {
   content: "";
   display: block;
   background: #fff;
@@ -160,7 +158,7 @@ body {
   clip-path: var(--clippy);
   transition: clip-path 0.3s;
 }
-.header .nav .nav-menu .nav-menu-item .nav-menu-item::after .nav-menu-item:hover {
+.header .nav__menu .nav-menu-item .nav-menu-item::after .nav-menu-item:hover {
   --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -250,6 +248,32 @@ body {
   padding-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .container-foto {
+    background-image: url(../img/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-foto h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  }
+  .container-foto h3 {
+    font-size: 0.5rem;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  }
+}
 .container-discography {
   display: flex;
   margin-top: 10rem;
@@ -273,22 +297,18 @@ body {
   box-shadow: 5px 5px 10px black;
 }
 
+/*---- Musicas populares ----*/
 .container-music {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
+  margin: 55px;
 }
-.container-music div {
-  padding: 1rem;
-}
-.container-music div h2 {
-  text-align: center;
+.container-music h3 {
   color: white;
+  text-align: center;
   font-size: 2rem;
-}
-.container-music div iframe {
-  box-shadow: 5px 5px 10px black;
 }
 
 .section-table {
