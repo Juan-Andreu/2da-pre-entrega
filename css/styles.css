@@ -9,11 +9,68 @@
 body {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
   background-color: #100F0F;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 769px) {
+  .header {
+    background-color: #080707;
+    height: 5rem;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(#080707, #100F0F);
+  }
+  .header .nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    align-items: center;
+  }
+  .header .nav .nav-label,
+  .header .nav .nav-input {
+    display: none;
+  }
+  .header .nav .subtitulo {
+    color: white;
+    font-size: 1rem;
+    line-height: 2.8rem;
+  }
+  .header .nav .subtitulo:hover {
+    color: rgb(116, 116, 116);
+    transition: 500ms;
+    font-size: 1.05rem;
+  }
+  .header .nav h2 {
+    font-weight: bold;
+    padding: 0 20px;
+  }
+  .header .nav .nav-menu {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .header .nav .nav-menu .nav-menu-item {
+    padding: 0 0.9rem;
+    text-transform: uppercase;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  .header .nav .nav-menu .nav-menu-item .nav-menu-item::after {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path 0.3s;
+  }
+  .header .nav .nav-menu .nav-menu-item .nav-menu-item::after .nav-menu-item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@media (max-width: 768px) {
   .nav-label {
     display: block;
     cursor: pointer;
@@ -67,7 +124,6 @@ body {
   margin: 0 15px;
   align-items: center;
 }
-.header .nav .nav-label,
 .header .nav .nav-input {
   display: none;
 }

@@ -1,321 +1,320 @@
-@import"./utils/variables";
-@import"./utils/mixin";
+ @import"./utils/variables";
+ @import"./utils/mixin";
 
-@import "./base/base";
+ @import "./base/base";
 
-@import "./components/media";
-// @import "./components/";
+ @import "./components/media";
+//  @import "./components/";
+//  @import "./pages/index";
 
-// @import "./pages/index";
+ * {
+     padding: 0;
+     box-sizing: content-box;
+     text-decoration: none;
+     list-style: none;
+     font-family: sans-serif;
+ }
 
-* {
-    padding: 0;
-    box-sizing: content-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: sans-serif;
-}
+ body {
+     margin: 0;
+     padding: 0;
+     /* overflow-x: hidden; */
+     background-color: #100F0F;
+ }
 
-body {
-    margin: 0;
-    padding: 0;
-    /* overflow-x: hidden; */
-    background-color: #100F0F;
-}
+ // ---- Encabezado ----
 
-// ---- Encabezado ----
+ .header {
+     background-color: #080707;
+     height: 5rem;
+     position: fixed;
+     width: 100vw;
+     top: 0;
+     left: 0;
+     z-index: 1;
+     background: linear-gradient(#080707, #100F0F);
 
-.header {
-    background-color: #080707;
-    height: 5rem;
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(#080707, #100F0F);
+     .nav {
+         display: flex;
+         justify-content: space-between;
+         margin: 0 15px;
+         align-items: center;
 
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 15px;
-        align-items: center;
+        //  .nav-label,
+         .nav-input {
+             display: none;
+         }
 
-        .nav-label,
-        .nav-input {
-            display: none;
-        }
+         .subtitulo {
+             color: $color-letra;
+             font-size: 1rem;
+             line-height: 2.8rem;
+         }
 
-        .subtitulo {
-            color: $color-letra;
-            font-size: 1rem;
-            line-height: 2.8rem;
-        }
+         .subtitulo:hover {
+             color: rgb(116, 116, 116);
+             transition: 500ms;
+             font-size: 1.05rem;
+         }
 
-        .subtitulo:hover {
-            color: rgb(116, 116, 116);
-            transition: 500ms;
-            font-size: 1.05rem;
-        }
+         h2 {
+             font-weight: bold;
+             padding: 0 20px;
+         }
 
-        h2 {
-            font-weight: bold;
-            padding: 0 20px;
-        }
+         .nav-menu {
+             display: grid;
+             grid-auto-flow: column;
 
-        .nav-menu {
-            display: grid;
-            grid-auto-flow: column;
+             .nav-menu-item {
+                 padding: 0 0.9rem;
+                 text-transform: uppercase;
+                 --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 
-            .nav-menu-item {
-                padding: 0 0.9rem;
-                text-transform: uppercase;
-                --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+                 .nav-menu-item::after {
+                     content: "";
+                     display: block;
+                     background: #fff;
+                     width: 90%;
+                     margin-top: 3px;
+                     height: 3px;
+                     clip-path: var(--clippy);
+                     transition: clip-path .3s;
 
-                .nav-menu-item::after {
-                    content: "";
-                    display: block;
-                    background: #fff;
-                    width: 90%;
-                    margin-top: 3px;
-                    height: 3px;
-                    clip-path: var(--clippy);
-                    transition: clip-path .3s;
+                     .nav-menu-item:hover {
+                         --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                     }
+                 }
+             }
+         }
+     }
+ }
 
-                    .nav-menu-item:hover {
-                        --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                    }
-                }
-            }
-        }
-    }
-}
+ // ---- Portada principal ----
 
-// ---- Portada principal ----
+ .container-foto {
+     background-image: url(../img/fondo.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     width: 98.8vw;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 
-.container-foto {
-    background-image: url(../img/fondo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 98.8vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+     h1 {
+         text-align: center;
+         font-size: 2.6rem;
+         color: white;
+         text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+     }
 
-    h1 {
-        text-align: center;
-        font-size: 2.6rem;
-        color: white;
-        text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
-    }
+     h3 {
+         font-size: 1rem;
+         color: white;
+         text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+     }
+ }
 
-    h3 {
-        font-size: 1rem;
-        color: white;
-        text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
-    }
-}
+ // ---- Seccion de informacion ----
 
-// ---- Seccion de informacion ----
+ .seccion-dos {
+     padding-top: 4rem;
+     text-align: justify;
+     display: flex;
+     flex-flow: row wrap;
+     margin: 0 3rem;
+     justify-content: space-around;
+     align-items: center;
 
-.seccion-dos {
-    padding-top: 4rem;
-    text-align: justify;
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 3rem;
-    justify-content: space-around;
-    align-items: center;
+     p {
+         color: white;
+         font-size: 1rem;
+         width: 45vw;
+         align-items: center;
+     }
 
-    p {
-        color: white;
-        font-size: 1rem;
-        width: 45vw;
-        align-items: center;
-    }
+     .bgfa-foto {
+         background-image: url(../img/bgfa.jpg);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         width: 37.5rem;
+         height: 25rem;
+         border-radius: 0.625rem;
+     }
+ }
 
-    .bgfa-foto {
-        background-image: url(../img/bgfa.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 37.5rem;
-        height: 25rem;
-        border-radius: 0.625rem;
-    }
-}
+ // ---- Pie de pagina ----
 
-// ---- Pie de pagina ----
+ .footer,
+ .footer__gallery {
+     margin-top: 5rem;
+     display: flex;
+     flex-flow: column wrap;
+     align-items: center;
+     align-content: center;
 
-.footer,
-.footer__gallery {
-    margin-top: 5rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    align-content: center;
+     .nombre-footer {
+         // text-align: center;
+         color: white;
+         font-size: 1.125rem;
+         text-shadow: 1px 1px 5px black;
+         margin: 0;
+     }
 
-    .nombre-footer {
-        // text-align: center;
-        color: white;
-        font-size: 1.125rem;
-        text-shadow: 1px 1px 5px black;
-        margin: 0;
-    }
+     .footer-items .subtitulo {
+         display: flex;
+         color: white;
+         flex-flow: row wrap;
+         margin: 1rem;
+         text-align: center;
+         justify-content: center;
+         align-content: center;
+     }
 
-    .footer-items .subtitulo {
-        display: flex;
-        color: white;
-        flex-flow: row wrap;
-        margin: 1rem;
-        text-align: center;
-        justify-content: center;
-        align-content: center;
-    }
+     .copyright,
+     .mas-info {
+         color: white;
+         text-align: center;
+         margin: 0.5rem 2rem;
+         display: block;
+         padding-bottom: 1rem;
+     }
+ }
 
-    .copyright,
-    .mas-info {
-        color: white;
-        text-align: center;
-        margin: 0.5rem 2rem;
-        display: block;
-        padding-bottom: 1rem;
-    }
-}
+ // ---- Archivo Discography ----
 
-// ---- Archivo Discography ----
+ .container-discography {
+     display: flex;
+     margin-top: 10rem;
+     flex-flow: row wrap;
+     justify-content: space-around;
+     align-items: center;
+     align-content: center;
+     position: relative;
 
-.container-discography {
-    display: flex;
-    margin-top: 10rem;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    position: relative;
+     .titulo-discography {
+         position: absolute;
+         top: -8rem;
+         text-align: center;
+         color: white;
+         text-shadow: 3px 3px 10px black;
+     }
 
-    .titulo-discography {
-        position: absolute;
-        top: -8rem;
-        text-align: center;
-        color: white;
-        text-shadow: 3px 3px 10px black;
-    }
+     div {
+         padding: 2rem;
+     }
 
-    div {
-        padding: 2rem;
-    }
+     iframe {
+         box-shadow: 5px 5px 10px black;
+     }
+ }
 
-    iframe {
-        box-shadow: 5px 5px 10px black;
-    }
-}
+ // ---- Musicas populares ----
 
-// ---- Musicas populares ----
+ .container-music {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-content: center;
 
-.container-music {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
+     div {
+         padding: 1rem;
 
-    div {
-        padding: 1rem;
+         h2 {
+             text-align: center;
+             color: white;
+             font-size: 2rem;
+         }
 
-        h2 {
-            text-align: center;
-            color: white;
-            font-size: 2rem;
-        }
+         iframe {
+             box-shadow: 5px 5px 10px black;
+         }
+     }
+ }
 
-        iframe {
-            box-shadow: 5px 5px 10px black;
-        }
-    }
-}
+ // ---- Tour ----
 
-// ---- Tour ----
+ .section-table {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     margin-top: 8rem;
 
-.section-table {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-top: 8rem;
+     .table {
+         /* background-color: #080707; */
+         border-radius: 0.500rem;
+         margin-top: 3rem;
+         width: 50vw;
+         height: 55vh;
+         padding: 2.5rem;
+         text-align: center;
+         border-collapse: collapse;
 
-    .table {
-        /* background-color: #080707; */
-        border-radius: 0.500rem;
-        margin-top: 3rem;
-        width: 50vw;
-        height: 55vh;
-        padding: 2.5rem;
-        text-align: center;
-        border-collapse: collapse;
+         tr {
+             border-bottom: 2px solid white;
+         }
+     }
+ }
 
-        tr {
-            border-bottom: 2px solid white;
-        }
-    }
-}
+ // ---- Shop ---- 
 
-// ---- Shop ---- 
+ .tarjeta {
+     width: 350px;
+     height: 300px;
 
-.tarjeta {
-    width: 350px;
-    height: 300px;
+     &__titulo {
+         font-size: 24px;
+     }
 
-    &__titulo {
-        font-size: 24px;
-    }
+     &__img {
+         width: 100%;
+     }
 
-    &__img {
-        width: 100%;
-    }
+     &__boton {
+         padding: 8px 10px;
+         background: #fff;
+         color: black;
+         border-radius: 5px;
+         transition: 500ms;
 
-    &__boton {
-        padding: 8px 10px;
-        background: #fff;
-        color: black;
-        border-radius: 5px;
-        transition: 500ms;
+         &:hover {
+             background: #a2a2a2;
+             color: #080707;
+             padding: 10px 12px;
+         }
+     }
+ }
 
-        &:hover {
-            background: #a2a2a2;
-            color: #080707;
-            padding: 10px 12px;
-        }
-    }
-}
+ // ---- Gallery Photos ----
 
-// ---- Gallery Photos ----
+ .container-gallery {
+     margin-top: 15rem;
 
-.container-gallery {
-    margin-top: 15rem;
+     .container-gallery-img {
+         margin: 0 4.5rem;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(3, 1fr);
+         gap: 10px 0;
+         justify-items: stretch;
+         align-items: stretch;
+         justify-content: center;
+         align-content: center;
+     }
 
-    .container-gallery-img {
-        margin: 0 4.5rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 10px 0;
-        justify-items: stretch;
-        align-items: stretch;
-        justify-content: center;
-        align-content: center;
-    }
+     img {
+         border-radius: 0.5rem;
+         margin: 10px;
+     }
+ }
 
-    img {
-        border-radius: 0.5rem;
-        margin: 10px;
-    }
-}
-
-.footer__gallery {
-    margin-top: 10rem;
-}
+ .footer__gallery {
+     margin-top: 10rem;
+ }
