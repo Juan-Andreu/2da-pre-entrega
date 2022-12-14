@@ -1,0 +1,65 @@
+// ---- Header ----
+
+.header {
+    background-color: #080707;
+    height: 5rem;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(#080707, #100F0F);
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15px;
+        align-items: center;
+
+        .nav-input {
+            display: none;
+        }
+
+        .subtitulo {
+            color: $color-letra;
+            font-size: 1rem;
+            line-height: 2.8rem;
+        }
+
+        .subtitulo:hover {
+            color: rgb(116, 116, 116);
+            transition: 500ms;
+        }
+
+        h2 {
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        &__menu {
+            display: grid;
+            grid-auto-flow: column;
+
+            .nav-menu-item {
+                padding: 0 0.9rem;
+                text-transform: uppercase;
+                --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+                .nav-menu-item::after {
+                    content: "";
+                    display: block;
+                    background: #fff;
+                    width: 90%;
+                    margin-top: 3px;
+                    height: 3px;
+                    clip-path: var(--clippy);
+                    transition: clip-path .3s;
+
+                    .nav-menu-item:hover {
+                        --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    }
+                }
+            }
+        }
+    }
+}
