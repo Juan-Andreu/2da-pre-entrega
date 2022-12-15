@@ -1,5 +1,79 @@
 // ---- Contact ----
 
-.formulario{
-    margin-top: 5rem;
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 30rem;
+    gap: 20px;
+
+
+
+    &__nya {
+        display: flex;
+        justify-content: space-between;
+        color: $color-letra;
+        padding: 1rem 0rem;
+
+        div{
+            padding: 0 2rem;
+        
+
+        input{
+              width: 100%;
+              border-radius: 5px;
+              padding: 10px;
+        }
+        
+        label{
+             width: 100%;
+        }
+    }
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        color: $color-letra;
+
+        div{
+            width: 100%;
+
+        input{
+            width: 100%;
+            padding: 10px;
+        }
+
+        label {
+            width: 100%;
+        }
+    }
+
+    }
+
+    &__textarea {
+        color: $color-letra;
+
+        input{
+            width: 100%;
+        }
+        
+        label{
+            width: 100%;
+        }
+    }
+
+    &__buttons { 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        input{
+            width: 100%;
+      }
+      
+      label{
+           width: 100%;
+      }
+    }
 }

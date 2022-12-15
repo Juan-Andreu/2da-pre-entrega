@@ -3,8 +3,8 @@
 .header {
     background-color: #080707;
     height: 5rem;
-    position: fixed;
-    width: 100vw;
+    position: sticky;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 1;
@@ -13,7 +13,6 @@
     .nav {
         display: flex;
         justify-content: space-between;
-        margin: 0 15px;
         align-items: center;
 
         .nav-input {
