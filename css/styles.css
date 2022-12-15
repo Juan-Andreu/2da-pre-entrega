@@ -447,12 +447,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 30rem;
+  margin: 5rem;
   gap: 20px;
-  width: 50vw;
 }
 .formulario__nya {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   color: white;
