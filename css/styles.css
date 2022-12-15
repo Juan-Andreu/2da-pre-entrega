@@ -492,7 +492,6 @@ body {
 }
 .formulario__textarea div input {
   width: 100%;
-  padding: 0 888px;
 }
 .formulario__textarea div label {
   width: 100%;
@@ -507,6 +506,14 @@ body {
   width: 100%;
   padding: 10px 120px;
   border-radius: 5px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: 500ms;
+}
+.formulario__buttons input:hover {
+  background-color: #080707;
+  color: white;
 }
 .formulario__buttons label {
   width: 100%;
