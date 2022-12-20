@@ -98,12 +98,6 @@ body {
     clip-path: circle(100% at center);
   }
 }
-@media (max-width: 576px) {
-  .container__discography {
-    display: flex;
-    flex-direction: column;
-  }
-}
 @media (max-width: 768px) {
   .section-table {
     display: flex;
@@ -360,7 +354,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
-  margin: 30px;
+  margin: 10px;
 }
 .container__discography iframe {
   box-shadow: 5px 5px 10px black;
