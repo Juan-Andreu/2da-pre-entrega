@@ -38,6 +38,10 @@
     justify-content: space-around;
     align-items: center;
 
+    .biografia{
+        margin-bottom: 40px;
+    }
+
     p {
         color: $color-letra;
         font-size: 1rem;
@@ -53,6 +57,21 @@
         width: 37.5rem;
         height: 25rem;
         border-radius: 0.625rem;
+    }
+
+    .saberMas{
+        margin-top: 20px;
+        align-items: center;
+        color:  #100F0F;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: 500ms;
+
+        &:hover{
+            background-color: #080707;
+            color: $color-letra;
+        }
     }
 }
 

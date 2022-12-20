@@ -11,42 +11,52 @@
 		z-index: 1;
 		background: linear-gradient(#080707, #100F0F);
 	}
+
 	.nav {
 		display: flex;
 		justify-content: space-between;
 		margin: 0 10px;
 		align-items: center;
+
 		h2 {
 			font-weight: bold;
 			padding: 0 20px;
 		}
 	}
+
 	.nav-input {
 		&:checked+.nav-menu {
 			background: #080707;
 		}
+
 		display: none;
 	}
+
 	.nav-label {
 		display: none;
 	}
+
 	.subtitulo {
 		color: white;
 		font-size: 1rem;
 		line-height: 2.8rem;
+
 		&:hover {
 			color: rgb(116, 116, 116);
 			transition: 300ms;
 		}
 	}
+
 	.nav-menu {
 		display: grid;
 		grid-auto-flow: column;
 	}
+
 	.nav-menu-item {
 		padding: 0 0.9rem;
 		text-transform: uppercase;
 		--clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
 		&::after {
 			content: "";
 			display: block;
@@ -57,6 +67,7 @@
 			clip-path: var(--clippy);
 			transition: clip-path .3s;
 		}
+
 		&:hover {
 			--clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		}
@@ -92,6 +103,15 @@
 	}
 }
 
+// ---- Discography ----
+
+@media (max-width: 576px) {
+	.container__discography {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 // ---- Tour ----
 
 @media (max-width: 768px) {
@@ -115,16 +135,13 @@
 			tr {
 				border-top: 2px solid white;
 				border-bottom: 2px solid white;
+			}
 
-				&:hover {
-					border-top: 3px solid;
-					border-bottom: 3px solid;
-				}
-
-				td {
-					padding: 0 16px;
-				}
+			td {
+				padding: 0 16px;
 			}
 		}
 	}
 }
+
+// ---- Photos ----

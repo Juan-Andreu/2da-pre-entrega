@@ -98,6 +98,12 @@ body {
     clip-path: circle(100% at center);
   }
 }
+@media (max-width: 576px) {
+  .container__discography {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .section-table {
     display: flex;
@@ -120,11 +126,7 @@ body {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
   }
-  .section-table .table tr:hover {
-    border-top: 3px solid;
-    border-bottom: 3px solid;
-  }
-  .section-table .table tr td {
+  .section-table .table td {
     padding: 0 16px;
   }
 }
@@ -267,6 +269,9 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.seccion-dos .biografia {
+  margin-bottom: 40px;
+}
 .seccion-dos p {
   color: white;
   font-size: 1rem;
@@ -281,6 +286,19 @@ body {
   width: 37.5rem;
   height: 25rem;
   border-radius: 0.625rem;
+}
+.seccion-dos .saberMas {
+  margin-top: 20px;
+  align-items: center;
+  color: #100F0F;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: 500ms;
+}
+.seccion-dos .saberMas:hover {
+  background-color: #080707;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -309,41 +327,38 @@ body {
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   }
 }
-.container-discography {
+.titulo__discography {
   display: flex;
-  margin-top: 10rem;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  position: relative;
 }
-.container-discography .titulo-discography {
-  position: absolute;
-  top: -8rem;
+.titulo__discography div h1,
+.titulo__discography div h2 {
   text-align: center;
   color: white;
-  text-shadow: 3px 3px 10px black;
+  text-shadow: 2px 2px 10px black;
 }
-.container-discography div {
-  padding: 2rem;
+
+.container__discography {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  margin: 30px;
 }
-.container-discography iframe {
+.container__discography iframe {
   box-shadow: 5px 5px 10px black;
-}
-.container-discography div {
-  width: 40rem;
 }
 
 /*---- Musicas populares ----*/
-.container-music {
+.container__music {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
   margin: 55px;
 }
-.container-music h3 {
+.container__music h3 {
   color: white;
   text-align: center;
   font-size: 2rem;
@@ -398,7 +413,7 @@ body {
 }
 
 .titulo__photos {
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
