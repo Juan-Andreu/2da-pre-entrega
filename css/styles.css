@@ -171,7 +171,7 @@ body {
 }
 .header .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .header .nav .nav-input {
@@ -314,6 +314,7 @@ body {
 .seccion-dos .saberMas:hover {
   background-color: #080707;
   color: white;
+  padding: 0.7rem;
 }
 
 @media (max-width: 768px) {
@@ -402,29 +403,6 @@ body {
 .section-table .table tr:hover {
   border-bottom: 3px solid;
   border-top: 3px solid;
-}
-
-.tarjeta {
-  width: 350px;
-  height: 300px;
-}
-.tarjeta__titulo {
-  font-size: 24px;
-}
-.tarjeta__img {
-  width: 100%;
-}
-.tarjeta__boton {
-  padding: 8px 10px;
-  background: #fff;
-  color: black;
-  border-radius: 5px;
-  transition: 500ms;
-}
-.tarjeta__boton:hover {
-  background: #a2a2a2;
-  color: #080707;
-  padding: 10px 12px;
 }
 
 .titulo__photos {
@@ -536,7 +514,7 @@ body {
 }
 .formulario__buttons input {
   width: 100%;
-  padding: 10px 120px;
+  padding: 10px 40px;
   border-radius: 5px;
   color: black;
   background-color: white;
