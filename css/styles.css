@@ -85,7 +85,7 @@ body {
     bottom: 0;
     background: #080707;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -128,6 +128,22 @@ body {
   }
   .section-table .table td {
     padding: 0 16px;
+  }
+}
+@media (max-width: 816px) {
+  .footer,
+  .footer__gallery {
+    margin-top: 5rem;
+  }
+  .footer .footer-items .subtitulo,
+  .footer__gallery .footer-items .subtitulo {
+    color: white;
+    flex-flow: row wrap;
+    margin: 0.5rem 0;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    text-shadow: 2px 2px 5px black;
   }
 }
 .tarjeta__boton {
@@ -217,7 +233,6 @@ body {
   display: flex;
   color: white;
   flex-flow: row wrap;
-  margin: rem;
   text-align: center;
   justify-content: center;
   align-content: center;
