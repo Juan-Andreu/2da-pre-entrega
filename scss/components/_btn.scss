@@ -1,15 +1,39 @@
-.tarjeta {
-&__boton {
-    padding: 8px 10px;
-    background: #fff;
-    color: black;
-    border-radius: 5px;
-    transition: 500ms;
+// ---- Boton index ----
 
-    &:hover {
-        background: #a2a2a2;
-        color: #080707;
-        padding: 10px 12px;
+.seccion-dos{
+    .saberMas{
+        margin-top: 20px;
+        color:  #100F0F;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: 500ms;
+
+        &:hover{
+            background-color: #080707;
+            color: $color-letra;
+            padding: 0.7rem;
+        }
     }
 }
+
+// ---- Botones form ----
+
+.formulario {
+    &__buttons {
+        input {
+            width: 20%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+            cursor: pointer;
+            transition: 500ms;
+
+            &:hover {
+                background-color: #080707;
+                color: $color-letra;
+            }
+        }
+    }
 }

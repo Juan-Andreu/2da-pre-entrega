@@ -1,9 +1,9 @@
- @import"./utils/variables";
- @import"./utils/mixin";
+ @import "./utils/variables";
+ @import "./utils/mixin";
+ @import "./utils/media";
 
 @import "./base/base";
 
- @import "./components/media";
  @import "./components/btn";
  @import "./components/navbar";
  @import "./components/footer";
