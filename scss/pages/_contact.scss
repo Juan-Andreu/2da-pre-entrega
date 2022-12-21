@@ -16,8 +16,8 @@
 .formulario {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 5rem;
     gap: 20px;
 
 
@@ -27,16 +27,16 @@
         justify-content: space-between;
         align-items: center;
         color: $color-letra;
-    
+        width: 40%;
+
 
         div {
-            padding: 0 1.5rem;
-
+            width: 40%;
 
             input {
                 width: 100%;
                 border-radius: 5px;
-                padding: 10px;
+                padding: 10px 0;
             }
 
             label {
@@ -51,13 +51,14 @@
         justify-content: space-between;
         align-items: center;
         color: $color-letra;
+        width: 40%;
 
         div {
-
+            width: 100%;
 
             input {
                 width: 100%;
-                padding: 10px 18px;
+                padding: 10px 0;
                 border-radius: 5px;
             }
 
@@ -74,10 +75,12 @@
         justify-content: space-between;
         align-items: center;
         color: $color-letra;
+        width: 40%;
 
         div {
+            width: 100%;
 
-            input{
+            textarea {
                 width: 100%;
             }
 
@@ -89,28 +92,28 @@
 
     &__buttons {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
+        width: 40%;
 
-        input {
-            width: 100%;
-            padding: 10px 40px;
-            border-radius: 5px;
-            color: black;
-            background-color: white;
-            cursor: pointer;
-            transition: 500ms;
+            input {
+                width: 20%;
+                padding: 10px 30px;
+                border-radius: 5px;
+                color: black;
+                background-color: white;
+                cursor: pointer;
+                transition: 500ms;
 
-            &:hover{
-               background-color: #080707;
-               color: $color-letra;
+                &:hover {
+                    background-color: #080707;
+                    color: $color-letra;
+                }
+            }
+
+            label {
+                width: 100%;
             }
         }
-
-        label {
-            width: 100%;
-        }
-
     }
-}

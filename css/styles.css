@@ -450,8 +450,8 @@ body {
 .formulario {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 5rem;
   gap: 20px;
 }
 .formulario__nya {
@@ -460,14 +460,15 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
+  width: 40%;
 }
 .formulario__nya div {
-  padding: 0 1.5rem;
+  width: 40%;
 }
 .formulario__nya div input {
   width: 100%;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 0;
 }
 .formulario__nya div label {
   width: 100%;
@@ -478,10 +479,14 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
+  width: 40%;
+}
+.formulario__form div {
+  width: 100%;
 }
 .formulario__form div input {
   width: 100%;
-  padding: 10px 18px;
+  padding: 10px 0;
   border-radius: 5px;
 }
 .formulario__form div label {
@@ -493,8 +498,12 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
+  width: 40%;
 }
-.formulario__textarea div input {
+.formulario__textarea div {
+  width: 100%;
+}
+.formulario__textarea div textarea {
   width: 100%;
 }
 .formulario__textarea div label {
@@ -502,13 +511,14 @@ body {
 }
 .formulario__buttons {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  width: 40%;
 }
 .formulario__buttons input {
-  width: 100%;
-  padding: 10px 40px;
+  width: 20%;
+  padding: 10px 30px;
   border-radius: 5px;
   color: black;
   background-color: white;
