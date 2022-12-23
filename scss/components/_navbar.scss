@@ -18,7 +18,12 @@
         .nav-input {
             display: none;
         }
-
+        
+        .subtituloNav{
+            color: $color-letra;
+            font-size: 1.5rem;
+            font-family: 'Anton', sans-serif;
+        }
         .subtitulo {
             color: $color-letra;
             font-size: 1rem;
