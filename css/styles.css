@@ -403,6 +403,7 @@ body {
   align-items: center;
 }
 .seccion-dos .bgfa-foto {
+  alt: "The Notorious B.I.G.";
   background-image: url(../img/bgfa.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -521,7 +522,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
   justify-items: center;
   align-items: center;
   justify-content: center;
@@ -529,8 +530,7 @@ body {
 }
 .container-gallery img {
   border-radius: 0.5rem;
-  margin: 10px;
-  width: 100%;
+  width: 95%;
 }
 
 .footer__gallery {
