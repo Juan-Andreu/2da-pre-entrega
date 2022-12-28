@@ -3,7 +3,7 @@
   .header {
     background-color: #080707;
     height: 5rem;
-    position: fixed;
+    position: sticky;
     width: 100vw;
     top: 0;
     left: 0;
@@ -279,7 +279,7 @@ body {
 }
 .header .nav .subtituloNav {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .header .nav .subtitulo {
   color: white;
